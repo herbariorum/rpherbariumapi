@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Service
 public class PersonService {
 
+    // adiciona o repository
     private PersonRepository personRepository;
 
     @Autowired

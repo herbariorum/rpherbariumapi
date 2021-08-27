@@ -7,6 +7,7 @@ import com.digitalinnovation.herbariorumapi.exception.PersonNotFoundException;
 import com.digitalinnovation.herbariorumapi.mapper.PersonMapper;
 import com.digitalinnovation.herbariorumapi.repository.PersonRepository;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,15 +16,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonService {
     // adiciona o repository
     private final PersonRepository personRepository;
-
-    @Autowired
-    public PersonService(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
 
     private final PersonMapper personMapper = PersonMapper.INSTANCE;
 

@@ -19,10 +19,7 @@ O projeto encontra-se em:
 
 🙏 [Meu github](https://github.com/herbariorum/rpherbariumapi)
 
-
-
-![image](https://user-images.githubusercontent.com/17984485/131173585-449b89f3-f46b-4097-bfce-abdc364cc75e.png)
-![linkedin](https://www.linkedin.com/in/jos%C3%A9-lima-04990821/)
+https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BkWE257Q5TvCOPVfnZndxkA%3D%3D![linkedin](https://www.linkedin.com/in/jos%C3%A9-lima-04990821/)
 
 :e-mail:eliaspbareia@gmail.com
 

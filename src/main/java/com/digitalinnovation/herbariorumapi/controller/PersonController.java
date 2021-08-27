@@ -2,6 +2,7 @@ package com.digitalinnovation.herbariorumapi.controller;
 
 import com.digitalinnovation.herbariorumapi.dto.request.PersonDTO;
 import com.digitalinnovation.herbariorumapi.dto.response.MessageResponseDTO;
+import com.digitalinnovation.herbariorumapi.exception.PersonNotFoundException;
 import com.digitalinnovation.herbariorumapi.service.PersonService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/people")
 public class PersonController {
+
 
     private PersonService personService;
 
@@ -32,5 +34,10 @@ public class PersonController {
     @GetMapping
     public List<PersonDTO> listAll(){
         return personService.listAll();
+    }
+
+    @GetMapping("/{id}")
+    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
+        return personService.findById(id);
     }
 }

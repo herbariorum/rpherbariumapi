@@ -21,6 +21,7 @@ O projeto encontra-se em:
 
 
 
+![image](https://user-images.githubusercontent.com/17984485/131173585-449b89f3-f46b-4097-bfce-abdc364cc75e.png)
 ![linkedin](https://www.linkedin.com/in/jos%C3%A9-lima-04990821/)
 
 :e-mail:eliaspbareia@gmail.com

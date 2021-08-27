@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/api/v1/people")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
-    
+
     private PersonService personService;
 
     @PostMapping

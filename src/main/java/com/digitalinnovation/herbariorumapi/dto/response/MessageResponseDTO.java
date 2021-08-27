@@ -1,4 +1,4 @@
-package com.digitalinnovation.herbariorumapi.dto;
+package com.digitalinnovation.herbariorumapi.dto.response;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,25 +1,31 @@
 package com.digitalinnovation.herbariorumapi.service;
 
-import com.digitalinnovation.herbariorumapi.dto.MessageResponseDTO;
+import com.digitalinnovation.herbariorumapi.dto.request.PersonDTO;
+import com.digitalinnovation.herbariorumapi.dto.response.MessageResponseDTO;
 import com.digitalinnovation.herbariorumapi.entity.Person;
+import com.digitalinnovation.herbariorumapi.mapper.PersonMapper;
 import com.digitalinnovation.herbariorumapi.repository.PersonRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
-public class PersonService {
 
+public class PersonService {
     // adiciona o repository
-    private PersonRepository personRepository;
+    private final PersonRepository personRepository;
 
     @Autowired
     public PersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
 
-    public MessageResponseDTO createPerson(@RequestBody Person person){
-        Person savedPerson = personRepository.save(person);
+    private final PersonMapper personMapper = PersonMapper.INSTANCE;
+
+    public MessageResponseDTO createPerson(PersonDTO personDTO){
+        Person personToSave = personMapper.toModel(personDTO);
+
+        Person savedPerson = personRepository.save(personToSave);
         return MessageResponseDTO
                 .builder()
                 .message("Created person with ID "+savedPerson.getId())
